@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>ELIXIR jobs widget</title>
+  </head>
+  <body>
+     <!-- START OF ELIXIR JOBS WIDGET -->
+  <!--
+  HTML template for the jobs listing. The default here is a table.
+  You can change this to what you want (e.g. a list) but you need to keep
+  'template-wrapper' as the id of the parent element and 'template-item'
+  as the id of the element that wraps each job.  The placeholders {{title}},
+  {{location}} and {{closingDate}} are populated by the script.
+  -->
+  <table>
+    <thead>
+      <th>Title</th>
+      <th>Location</th>
+      <th>Closing date</th>
+    </thead>
+    <tbody id="template-wrapper">
+    <script id="template-item" type="text/template">
+      <tr>
+        <td>{{title}}</td>
+        <td>{{location}}</td>
+        <td>{{closingDate}}</td>
+      </tr>
+    </script>
+    </tbody>
+  </table>
+<p><a href="https://elixir-europe.org/about-us/vacancies/form" target="_blank">Submit a job</a> on the ELIXIR Europe website.</p>
+<script src="./elixir-jobs.js"></script>
+<!-- END OF ELIXIR JOBS WIDGET -->
+  </body>
+</html>
