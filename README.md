@@ -36,10 +36,16 @@ Copy and paste the following text into your web page, where you want the job lis
         <p><a href="https://elixir-europe.org/about-us/vacancies/form" target="_blank">Submit a job</a> on the ELIXIR Europe website.</p>
         <script src="https://elixir-europe.org/sites/all/libraries/jobs/elixir-jobs.js"></script>
 
-### Notes
+### Notes on usage
 
  - The table will inherit the style of your website. It has no styling with it.
  - There is no title to the table. You need to put that above the pasted code.
  - The table shows all jobs from the ELIXIR job vacancies page, including jobs from industry.
- - You can change the HTML in the code above as long as you keep the placeholders {{title}}, {{location}} and {{closingDate}}, and you keep the ids template-wrapper and template-item.
+ - You can change the HTML in the code above as long as you keep the placeholders `{{title}}`, `{{location}}` and `{{closingDate}}`, and you keep the ids `template-wrapper` and `template-item`.
  - If the script can't connect to the file where the jobs are located (on the ELIXIR server) then it will say, "There are no jobs to show at the moment". If you get this message contact [webmaster@elixir-europe.org](mailto:webmaster@elixir-europe.org).
+
+## More technical notes
+
+This is a quick fix solution for people who want to embed the ELIXIR jobs on their site. It is a simple script that calls some JSON from the ELIXIR server, parses it, and puts it in an HTML template. Of course it would be better to run this request as a cron job, or other periodic request, and cache the results locally. This would speed the page up and protect against connection problems.
+
+The script is vanilla Javascript and the only dependency is [https://github.com/rbren/rss-parser](https://github.com/rbren/rss-parser). For development, [Parcel](https://parceljs.org/) was used. 
