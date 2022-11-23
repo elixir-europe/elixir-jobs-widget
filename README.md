@@ -46,6 +46,8 @@ Copy and paste the following text into your web page, where you want the job lis
 
 ## More technical notes
 
-This is a quick fix solution for people who want to embed the ELIXIR jobs on their site. It is a simple script that calls some JSON from the ELIXIR server, parses it, and puts it in an HTML template. Of course it would be better to run this request as a cron job, or other periodic request, and cache the results locally. This would speed the page up and protect against connection problems.
+This is a quick fix solution for people who want to embed the ELIXIR jobs on their site. It is a simple script that calls some JSON from the ELIXIR server, parses it, and puts it in an HTML template. 
+
+Of course it would be better to run the JSON request as a cron job, or other periodic request, and cache the results locally. Similarly the Javascript could be stored locally. This would speed the page up and protect against connection problems. However it wouldn't then be a non-technical, zero configuration solution, which was the goal.
 
 The script is vanilla Javascript and the only dependency is [https://github.com/rbren/rss-parser](https://github.com/rbren/rss-parser). For development, [Parcel](https://parceljs.org/) was used. 
