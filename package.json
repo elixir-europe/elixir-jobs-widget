@@ -1,17 +1,14 @@
 {
-  "name": "jobs-widget-new",
+  "name": "ELIXIR jobs widget",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
+  "description": "To pull jobs from the ELIXIR Europe jobs page at https://elixir-europe.org/about-us/vacancies",
+  "author": "webmaster@elixir-europe.org",
   "license": "ISC",
   "dependencies": {
     "rss-parser": "^3.12.0"
   },
   "devDependencies": {
+    "parcel": "latest",
     "buffer": "^5.7.1",
     "events": "^3.3.0",
     "stream-browserify": "^3.0.0",
