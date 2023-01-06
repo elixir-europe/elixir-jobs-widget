@@ -8,7 +8,7 @@
 let Parser = require("rss-parser");
 let parser = new Parser();
 
-const CORS_PROXY = "https://limitless-ravine-71328.herokuapp.com/";
+const CORS_PROXY = "https://corsproxy.io/?";
 var templateItemWrapper = document.getElementById("template-item");
 var templateHtml = templateItemWrapper.innerHTML;
 var itemHtml = "";
